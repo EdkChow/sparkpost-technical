@@ -1,15 +1,13 @@
 const express = require('express');
 const controller = require('./controller');
 
-require('dotenv').config();
-
 const app = express();
 
 // handle parsing request body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const PORT = process.env.PORT || 8000;
+const PORT = 8000;
 
 // API routes
 app.post('/sparkpost', controller.containsName, controller.addName, (req, res) => {
