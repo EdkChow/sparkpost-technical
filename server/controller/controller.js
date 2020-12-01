@@ -1,4 +1,4 @@
-const { persons, containsName, updateAge, findName } = require('./helpers');
+const { persons, containsName, updateAge, findName } = require('../utils/helpers');
 
 const controller = {};
 

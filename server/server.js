@@ -1,5 +1,5 @@
 const express = require('express');
-const controller = require('./controller');
+const controller = require('./controller/controller');
 
 const app = express();
 
@@ -24,7 +24,6 @@ app.get('/sparkpost/:id', controller.containsName, controller.findName, (req, re
 
 // catch-all route handler for any requests to an unknown route
 app.use((req, res) => res.status(404).send('Route not found'));
-
 
 // express global error handler
 app.use((err, req, res, next) => {
