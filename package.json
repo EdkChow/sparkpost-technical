@@ -2,8 +2,9 @@
   "name": "sparkpost-technical",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "npx nodemon server/server.js",
     "test": "jest"
   },
   "keywords": [],

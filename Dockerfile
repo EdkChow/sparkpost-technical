@@ -1,7 +1,13 @@
 FROM node:latest
 
-COPY . .
+WORKDIR /usr/src/app
+
+COPY package.json .
 
 RUN npm install
 
-CMD node server.js
+EXPOSE 8000
+
+CMD node server/server.js
+
+COPY . .
